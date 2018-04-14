@@ -1,10 +1,11 @@
+import cookbook.ingredients.schema
 import graphene
 
-import cookbook.ingredients.schema
+from graphene_django.debug import DjangoDebug
 
 
 class Query(cookbook.ingredients.schema.Query, graphene.ObjectType):
-    # This class will inherit from multiple Queries as more apps added to the project
-    pass
+    debug = graphene.Field(DjangoDebug, name='__debug')
+
 
 schema = graphene.Schema(query=Query)

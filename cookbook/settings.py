@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cookbook.ingredients',
     'graphene_django',
+    'cookbook.ingredients',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +50,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# GRAPHENE = {
+#     'SCHEMA': 'cookbook.schema.schema',
+#     'MIDDLEWARE': (
+#         'graphene_django.debug.DjangoDebugMiddleware',
+#     )
+# }
 
 ROOT_URLCONF = 'cookbook.urls'
 
@@ -100,10 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-GRAPHENE = {
-    'SCHEMA': 'cookbook.schema.schema'
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
