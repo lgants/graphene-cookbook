@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cookbook.ingredients',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+GRAPHENE = {
+    'SCHEMA': 'cookbook.schema.schema'
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
