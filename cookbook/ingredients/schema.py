@@ -84,6 +84,7 @@ class IngredientNode(DjangoObjectType):
         # Allow for some more advanced filtering here
         interfaces = (Node, )
         filter_fields = {
+            'id': ['exact', 'icontains', 'istartswith'],
             'name': ['exact', 'icontains', 'istartswith'],
             'notes': ['exact', 'icontains'],
             'category': ['exact'],
